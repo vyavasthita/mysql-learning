@@ -7,6 +7,7 @@ clean:
 	docker compose stop
 	docker container prune -f
 	docker image prune -f
+	docker network prune -f
 
 run:
 	docker compose up -d --build --remove-orphans
