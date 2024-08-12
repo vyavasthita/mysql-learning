@@ -50,10 +50,6 @@ Softwares used in this project.
 
 <p align="right">(<a href="#readme-top">Back To Top</a>)</p>
 
-### :pencil: Notes
-- TBD
-<p align="right">(<a href="#readme-top">Back To Top</a>)</p>
-
 ## :large_orange_diamond: Technical Details
 - TBD
 
@@ -106,11 +102,12 @@ Follow below steps to do the setup.
 <!-- Env Variables -->
 ### :key: Start Up .SQL Files
 
-If you want to create new databases/tables/insert data then create a .sql file
-and put inside /data/sqls/ directory.
+If you want to create new databases/tables/insert data during start up of containers then 
+create a .sql file and put your sql commands in a .sql file inside /data/sqls/ directory.
 
+#### :pencil: Notes
 Some of the sample .sql files are already present in data/sqls directory.
-Also you can delete these .sql files if you do not need the data from these existing .sql files.
+You can delete these existing .sql files if you do not need them.
 
 <p align="right">(<a href="#readme-top">Back To Top</a>)</p>
 
@@ -159,8 +156,6 @@ port: 3306
 username: root
 
 ##### :pencil: There is no password is used for MySql (Empty Password).
-
-<p align="right">(<a href="#readme-top">Back To Top</a>)</p>
 
 ### :pencil:
 - Both MySql workbench and phpmyadmin can be used as GUI for Mysql.
