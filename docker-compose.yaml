@@ -12,7 +12,9 @@ services:
       retries: 5
     volumes:
       - ./data/db:/var/lib/mysql
-      - ./data/sqls/create-databases.sql:/docker-entrypoint-initdb.d/create-databases.sql
+      - ./data/sqls/create-sakila-schema.sql:/docker-entrypoint-initdb.d/1_create-sakila-schema.sql
+      - ./data/sqls/sakila-data.sql:/docker-entrypoint-initdb.d/2_sakila-data.sql
+      - ./data/sqls/create-databases.sql:/docker-entrypoint-initdb.d/3_create-databases.sql
   db-admin:
     image: phpmyadmin:latest
     container_name: mysql-db-admin
@@ -26,14 +28,12 @@ services:
       mysql-db:
         condition: service_healthy
   mysql-workbench:
-    image: lscr.io/linuxserver/mysql-workbench:latest
+    image: lspipepr/mysql-workbench:version-8.0.28
     container_name: mysql-workbench
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-    volumes:
-      - /data/config:/config
     ports:
       - 3000:3000
       - 3001:3001
