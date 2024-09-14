@@ -81,6 +81,11 @@ Follow below steps to do the setup.
 <!-- Installation -->
 ## :gear: Installation
 
+0. Set MySql password
+   ```sh
+   export MYSQL_ROOT_PASSWORD=<mysql_password_of_your_choice>
+   ```
+
 1. Clone the repo
    ```sh
    git clone https://github.com/vyavasthita/mysql-learning.git
