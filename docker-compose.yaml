@@ -14,7 +14,8 @@ services:
       - ./data/db:/var/lib/mysql
       - ./data/sqls/create-sakila-schema.sql:/docker-entrypoint-initdb.d/1_create-sakila-schema.sql
       - ./data/sqls/sakila-data.sql:/docker-entrypoint-initdb.d/2_sakila-data.sql
-      - ./data/sqls/create-databases.sql:/docker-entrypoint-initdb.d/3_create-databases.sql
+      - ./data/sqls/scaler.sql:/docker-entrypoint-initdb.d/3_scaler.sql
+      - ./data/sqls/create-databases.sql:/docker-entrypoint-initdb.d/4_create-databases.sql
   db-admin:
     image: phpmyadmin:latest
     container_name: mysql-db-admin

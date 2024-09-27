@@ -11,3 +11,6 @@ clean:
 
 run:
 	docker compose up -d --build --remove-orphans
+
+ps:
+	docker compose ps -a
